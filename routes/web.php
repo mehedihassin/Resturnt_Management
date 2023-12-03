@@ -23,6 +23,8 @@ Route::get('/about', [HomeController::class, 'about'])->name('fontend.about');
 Route::get('/booking', [HomeController::class, 'table'])->name('fontend.booking');
 Route::get('/ourteam', [HomeController::class, 'ourteam'])->name('fontend.ourteam');
 
+//cart section.............
+Route::post('/cart/{id}', [HomeController::class, 'cart'])->name('fontend.cart');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -77,6 +79,9 @@ Route::get('/waiter/dashboard', [WaiterController::class, 'dashboard'])->name('w
 
 //reservation route ...........
 Route::post('/admin/reservation', [ReservationController::class, 'store'])->name('reservation.store');
+
+
+
 
 
 
